@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompletedTaskFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="75.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Text fill="WHITE" layoutX="121.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Completed Tasks">
+         <font>
+            <Font name="Poppins Bold" size="40.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblCompletedTask" layoutX="25.0" layoutY="122.0" prefHeight="225.0" prefWidth="550.0">
+         <columns>
+            <TableColumn fx:id="colCompletedTaskID" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colCompletedTask" maxWidth="1.7976931348623157E308" prefWidth="378.39996337890625" text="Task" />
+            <TableColumn fx:id="colCompletedTaskDate" prefWidth="125.0" text="Date" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="25.0" layoutY="84.0" prefHeight="26.0" prefWidth="400.0" />
+      <Button layoutX="101.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnHomePageOnAction" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #18BD5B;" text="&lt;&lt; Home Page" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="449.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #3498db;" text="Search" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="238.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnFullListNewOnAction" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #1877F2;" text="Full List" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="374.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: rgba(231, 76, 60,1.0);" text="Delete" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

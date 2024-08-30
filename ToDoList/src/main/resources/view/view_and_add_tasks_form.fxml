@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewAddTaskFormController">
+   <children>
+      <TextField fx:id="txtSelectedTask" layoutX="501.0" layoutY="57.0" prefHeight="26.0" prefWidth="378.0" />
+      <DatePicker fx:id="dateSelectedDate" layoutX="501.0" layoutY="88.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button layoutX="802.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #18BD5B;" text="Update" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="717.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: rgba(231, 76, 60,1.0);" text="Delete" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Separator layoutX="503.0" layoutY="153.0" prefHeight="0.0" prefWidth="378.0" />
+      <Button layoutX="504.0" layoutY="158.0" mnemonicParsing="false" onAction="#btnAddNewOnAction" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #1877F2;" text="+ Add New To Do" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Separator layoutX="484.0" layoutY="21.0" orientation="VERTICAL" prefHeight="359.0" prefWidth="9.0" />
+      <Pane fx:id="paneAddTask" layoutX="499.0" layoutY="194.0" prefHeight="145.0" prefWidth="386.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="146.0" layoutX="4.0" stroke="#00000081" strokeType="INSIDE" width="378.0" />
+            <Label layoutX="18.0" layoutY="10.0" prefHeight="18.0" prefWidth="75.0" text="Task" />
+            <TextField fx:id="txtTask" layoutX="16.0" layoutY="33.0" prefHeight="26.0" prefWidth="354.0" />
+            <Button layoutX="220.0" layoutY="90.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #18BD5B;" text="Add To List" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="18.0" layoutY="67.0" prefHeight="18.0" prefWidth="75.0" text="Task Date" />
+            <DatePicker fx:id="dateTaskDate" layoutX="19.0" layoutY="90.0" prefHeight="25.0" prefWidth="192.0" />
+         </children>
+      </Pane>
+      <Button layoutX="501.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnHomePageOnAction" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #18BD5B;" text="&lt;&lt; Home Page" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="501.0" layoutY="31.0" prefHeight="18.0" prefWidth="75.0" text="Selected Task" />
+      <TableView fx:id="tblToDoTable" layoutX="20.0" layoutY="24.0" prefHeight="359.0" prefWidth="450.0">
+         <columns>
+            <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+            <TableColumn fx:id="colID" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colTask" maxWidth="1.7976931348623157E308" prefWidth="200.0" text="Task" />
+            <TableColumn fx:id="colDate" prefWidth="100.0" text="Date" />
+         </columns>
+      </TableView>
+      <Button layoutX="717.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnCompletedNewOnAction" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #1877F2;" text="Completed" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
